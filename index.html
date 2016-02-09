@@ -1,55 +1,240 @@
-# Comparatif odoo 9.0 vs 8.0 en termes de mises à jour
-## 2e test odoo9.0
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>index</title>
+<!-- 2016-02-09 mar. 14:45 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Aziz Yemloul" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">index</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Comparatif odoo 9.0 vs 8.0 en termes de mises à jour</a>
+<ul>
+<li><a href="#sec-1-1">1.1. 2e test odoo9.0</a></li>
+<li><a href="#sec-1-2">1.2. Odoo9.0 une branche en développement intensif</a></li>
+<li><a href="#sec-1-3">1.3. Odoo8.0 une branche plus gérable en production</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Clonage partiel de odoo et update (méthode automatisée)</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Scénario</a></li>
+<li><a href="#sec-2-2">2.2. Problématique</a></li>
+<li><a href="#sec-2-3">2.3. Piste gupodoo</a></li>
+<li><a href="#sec-2-4">2.4. script gupodoo</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Clonage de VM sur Proxmox</a></li>
+<li><a href="#sec-4">4. Partage samba</a></li>
+<li><a href="#sec-5">5. Apt-cacher-ng</a></li>
+<li><a href="#sec-6">6. Lenteur authentification SSH</a></li>
+<li><a href="#sec-7">7. Machines virtuelles déplacée</a></li>
+<li><a href="#sec-8">8. Odoo à démarrage au boot</a></li>
+<li><a href="#sec-9">9. Init</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Comparatif odoo 9.0 vs 8.0 en termes de mises à jour</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 2e test odoo9.0</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
 La solution de contournement serait de créer des cron job qui feraient
-appel à gupodoo toutes les heures
-Test à <2016-02-09 mar. 09:27>
-``` sh
-$ gupodoo
+appelle à gupodoo toutes les heures
+Test à <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-02-09 mar. 09:27&gt;</span></span>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">$ gupodoo
 On est sur la branche 9.0
 Le dernier commit en local remonte au 2016-02-08T17:25:10Z
-Vous avez 2 commits de différence avec l'état d'avancement du projet Odoo9.0
+Vous avez 2 commits de diff&#233;rence avec l<span style="color: #8b2252;">'&#233;tat d'</span>avancement du projet Odoo9.0
 Le fetch aura 27 commits de profondeur
 remote: Counting objects: 4817, donne.
 remote: Compressing objects: 100% (4414/4414), donne.
 remote: Total 4817 (delta 3275), reused 1619 (delta 402), pack-reused 0
-Réception d'objets: 100% (4817/4817), 11.66 MiB | 947.00 KiB/s, donne.
-Résolution des deltas: 100% (3275/3275), complété avec 2061 objets locaux.
-Depuis https://www.github.com/odoo/odoo
-   58bc484..0948656  9.0        -> origin/9.0
-aziz@pdn ~/Git-Repos/jedi-starter/o9 $ git merge origin/
-origin/9.0    origin/HEAD
-aziz@pdn ~/Git-Repos/jedi-starter/o9 $ git merge origin/9.0
-Mise à jour 58bc484..0948656
-Fast-forward
- addons/payment_ogone/models/ogone.py | 3 ++-
- doc/howtos/backend.rst               | 2 +-
- 2 files changed, 3 insertions(+), 2 deletions(-)
-```
-## Odoo9.0 une branche en développement intensif
+R&#233;ception d<span style="color: #8b2252;">'objets: 100% (4817/4817), 11.66 MiB | 947.00 KiB/s, donne.</span>
+<span style="color: #8b2252;">R&#233;solution des deltas: 100% (3275/3275), compl&#233;t&#233; avec 2061 objets locaux.</span>
+<span style="color: #8b2252;">Depuis https://www.github.com/odoo/odoo</span>
+<span style="color: #8b2252;">   58bc484..0948656  9.0        -&gt; origin/9.0</span>
+<span style="color: #8b2252;">aziz@pdn ~/Git-Repos/jedi-starter/o9 $ git merge origin/</span>
+<span style="color: #8b2252;">origin/9.0    origin/HEAD</span>
+<span style="color: #8b2252;">aziz@pdn ~/Git-Repos/jedi-starter/o9 $ git merge origin/9.0</span>
+<span style="color: #8b2252;">Mise &#224; jour 58bc484..0948656</span>
+<span style="color: #8b2252;">Fast-forward</span>
+<span style="color: #8b2252;"> addons/payment_ogone/models/ogone.py | 3 ++-</span>
+<span style="color: #8b2252;"> doc/howtos/backend.rst               | 2 +-</span>
+<span style="color: #8b2252;"> 2 files changed, 3 insertions(+), 2 deletions(-)</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Odoo9.0 une branche en développement intensif</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
 En  l'espace  de   12h  la  branche  9.0  de  odoo   a  avancé  de  12
 commits.  Mettre à  jour  odoo  avec ces  12  commits  a nécessité  le
 téléchargement de près de 106M de  données. L'opération a duré plus de
 20mn.
+</p>
 
-``` sh
-# <2016-02-08 lun. 22:51>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #b22222;"># </span><span style="color: #b22222;">&lt;2016-02-08 lun. 22:51&gt;</span>
 $ gupodoo
 On est sur la branche 9.0
 Le dernier commit en local remonte au 2016-02-08T11:15:51Z
-Vous avez 12 commits de différence avec l'état d'avancement du projet Odoo9.0
+Vous avez 12 commits de diff&#233;rence avec l<span style="color: #8b2252;">'&#233;tat d'</span>avancement du projet Odoo9.0
 Le fetch aura 13 commits de profondeur
 remote: Counting objects: 45997, donne.
 remote: Compressing objects: 100% (37509/37509), donne.
 remote: Total 45997 (delta 24478), reused 21996 (delta 7610), pack-reused 0
-Réception dobjets: 100% (45997/45997), 105.71 MiB | 95.00 KiB/s, donne.
-Résolution des deltas: 100% (24478/24478), complété avec 3007 objets locaux.
+R&#233;ception dobjets: 100% (45997/45997), 105.71 MiB | 95.00 KiB/s, donne.
+R&#233;solution des deltas: 100% (24478/24478), compl&#233;t&#233; avec 3007 objets locaux.
 Depuis https://www.github.com/odoo/odoo
-   05f44e5..58bc484  9.0        -> origin/9.0
-# <2016-02-08 lun. 23:12>
+   05f44e5..58bc484  9.0        -&gt; origin/9.0
+<span style="color: #b22222;"># </span><span style="color: #b22222;">&lt;2016-02-08 lun. 23:12&gt;</span>
 $ du -h --max-depth=0
 694M    .
 $ git merge origin/9.0
-Mise à jour 05f44e5..58bc484
+Mise &#224; jour 05f44e5..58bc484
 Fast-forward
  MANIFEST.in                                                               |  3 +++
  addons/mail/models/mail_thread.py                                         | 11 ++++++-----
@@ -67,285 +252,443 @@ Fast-forward
  13 files changed, 68 insertions(+), 19 deletions(-)
 $ git log --oneline
 58bc484 [FIX] portal_sale: Portal users can read taxes groups
-0b7990c [FIX] mail: put only employees into the group_data 'user'
-243d207 [FIX] mail: Use standard signature to bien être recognized by services like Google
-52f55ed [FIX] Packaging: deb: include missing font files in builds
+0b7990c [FIX] mail: put only employees into the group_data <span style="color: #8b2252;">'user'</span>
+243d207 [FIX] mail: Use standard signature to bien &#234;tre recognized by services like Google
+52f55ed [FIX] Packaging: deb: include missing font files<span style="color: #a020f0;"> in</span> builds
 dde9741 [FIX] web: pivot click keep view references
 5fe84da [FIX] website_forum: use placeholder for controller /avatar
 1e54a8f [FIX] website_forum: dont index forum_post if deleted
 5038241 [FIX] website_mail_channel: Impossible to subscribe to forum_post
 04b2d91 [MERGE] forward port of branch saas-6 up to fead627
 fead627 [MERGE] forward port of branch 8.0 up to 3ff4dae
-55c7d2d [FIX] web_editor: don't convert style into class by default. Only if use style-inline (because very poor performance for sale.order form view because contains very crappy dom in website_description field)
-82e60a9 [FIX] mail: automatic subscription of responsible
-05f44e5 [FIX] purchase: avoid comparing Records with ids
-a594356 [FIX] stock_account: "Set standard price" button
-3ff4dae [I18N] Update translation terms from Transifex
-bc26a49 [MERGE] Forward-port 7.0 up to 4de3f4c4baa45b6bc5d0d2ede158d29ca4f99d57
-4de3f4c [FIX] expression: fix search for o2m with non existing id
-d036e3b [FIX] membership: remove membership line when deleting invoice
-1f022a0 [MERGE] Forward-port 8.0 up to rev. 67a63e2cc9018dbb1f96f500927ce421a4fc6f6b
-67a63e2 [MERGE] Forward-port 7.0 up to rev. cb609bd4258fd3e7b4f4caff4828ed947833f995
-aca28c8 [FIX] website_sale: do not compute price of every pricelist
-cb609bd [FIX] tools.misc: log errors when parsing fails
-6562309 [MERGE] Forward-port 8.0 up to e8d06f7b206329a0afa93489ba52851c09080359
-e8d06f7 [MERGE] Forward-port 7.0 up to bdbcbea2857e5bd875f9922cce443d9f9f506bb4
-d613843 [MERGE] forward port of branch 8.0 up to 8848af7
-```
-## Odoo8.0 une branche plus gérable en production
+55c7d2d [FIX] web_editor: don<span style="color: #8b2252;">'t convert style into class by default. Only if use style-inline (because very poor performance for sale.order form view because contains very crappy dom in website_description field)</span>
+<span style="color: #8b2252;">82e60a9 [FIX] mail: automatic subscription of responsible</span>
+<span style="color: #8b2252;">05f44e5 [FIX] purchase: avoid comparing Records with ids</span>
+<span style="color: #8b2252;">a594356 [FIX] stock_account: "Set standard price" button</span>
+<span style="color: #8b2252;">3ff4dae [I18N] Update translation terms from Transifex</span>
+<span style="color: #8b2252;">bc26a49 [MERGE] Forward-port 7.0 up to 4de3f4c4baa45b6bc5d0d2ede158d29ca4f99d57</span>
+<span style="color: #8b2252;">4de3f4c [FIX] expression: fix search for o2m with non existing id</span>
+<span style="color: #8b2252;">d036e3b [FIX] membership: remove membership line when deleting invoice</span>
+<span style="color: #8b2252;">1f022a0 [MERGE] Forward-port 8.0 up to rev. 67a63e2cc9018dbb1f96f500927ce421a4fc6f6b</span>
+<span style="color: #8b2252;">67a63e2 [MERGE] Forward-port 7.0 up to rev. cb609bd4258fd3e7b4f4caff4828ed947833f995</span>
+<span style="color: #8b2252;">aca28c8 [FIX] website_sale: do not compute price of every pricelist</span>
+<span style="color: #8b2252;">cb609bd [FIX] tools.misc: log errors when parsing fails</span>
+<span style="color: #8b2252;">6562309 [MERGE] Forward-port 8.0 up to e8d06f7b206329a0afa93489ba52851c09080359</span>
+<span style="color: #8b2252;">e8d06f7 [MERGE] Forward-port 7.0 up to bdbcbea2857e5bd875f9922cce443d9f9f506bb4</span>
+<span style="color: #8b2252;">d613843 [MERGE] forward port of branch 8.0 up to 8848af7</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Odoo8.0 une branche plus gérable en production</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
 La branche  8.0 est plus  stable. Dans le même  laps de temps  un seul
 commit a été enregistré. La mise à jour est immédiate.
+</p>
 
+<p>
 Un engagement d'IGPRO sur une mise à jour permanente de l'installation
 vis-à-vis du client est d'autant plus envisageable.
+</p>
 
-``` sh
-$ gupodoo
+<div class="org-src-container">
+
+<pre class="src src-sh">$ gupodoo
 On est sur la branche 8.0
 Le dernier commit en local remonte au 2016-02-07T02:58:52Z
-Vous avez 1 commits de différence avec l'état d'avancement du projet Odoo8.0
+Vous avez 1 commits de diff&#233;rence avec l<span style="color: #8b2252;">'&#233;tat d'</span>avancement du projet Odoo8.0
 Le fetch aura 5 commits de profondeur
 remote: Counting objects: 21, donne.
 remote: Compressing objects: 100% (17/17), donne.
 remote: Total 21 (delta 17), reused 8 (delta 4), pack-reused 0
 Unpacking objects: 100% (21/21), donne.
 Depuis https://www.github.com/odoo/odoo
-   3ff4dae..ff915dd  8.0        -> origin/8.0
+   3ff4dae..ff915dd  8.0        -&gt; origin/8.0
 $ du -h --max-depth=0
 595M    .
 $ git merge origin/8.0
-Mise à jour 3ff4dae..ff915dd
+Mise &#224; jour 3ff4dae..ff915dd
 Fast-forward
  openerp/addons/base/ir/ir_model.py | 33 +++++++++++++++++----------------
  1 file changed, 17 insertions(+), 16 deletions(-)
-```
-# Clonage partiel de odoo et update (méthode automatisée)
-## Scénario
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Clonage partiel de odoo et update (méthode automatisée)</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Scénario</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
 Le client demande une installation odoo hébergée. Dans cet exemple la version 9.0.
 Sur le serveur, faire un clone avec une profondeur de 1 commit d'historique
-``` sh
-git clone https://www.github.com/odoo/odoo --depth 1 --branch 9.0 --single-branch .
-```
-Le résultat à date <2016-02-08 lun.>
-``` sh
-$ git log --oneline
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">git clone https://www.github.com/odoo/odoo --depth 1 --branch 9.0 --single-branch .
+</pre>
+</div>
+<p>
+Le résultat à date <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-02-08 lun.&gt;</span></span>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">$ git log --oneline
 05f44e5 [FIX] purchase: avoid comparing Records with ids
 $ du -h --max-depth=0
 573M    .
-```
-*Observation*
->	Contrairement à ce qui a été introduit un clone --depth 1 crée un dossier .git/
->	L'installation igpro-online n'a pas été faite selon cette méthode.
->	L'autre éventualité est que le dossier ait disparu suite à une mauvaise manipulation.
-## Problématique
+</pre>
+</div>
+<p>
+<b>Observation</b>
+</p>
+<pre class="example">
+	Contrairement à ce qui a été introduit un clone --depth 1 crée un dossier .git/
+	L'installation igpro-online n'a pas été faite selon cette méthode.
+	L'autre éventualité est que le dossier ait disparu suite à une mauvaise manipulation.
+</pre>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Problématique</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
 Maintenir l'installation du client et de l'équipe de développement à jour.
-Un simple ~git pull~ reconstruira l'historique odoo depuis le début ce qui aura pour effet de tripler le volume de l'installation et de rogner sur le crédit de flux.
+Un simple <code>git pull</code> reconstruira l'historique odoo depuis le début ce qui aura pour effet de tripler le volume de l'installation et de rogner sur le crédit de flux.
+</p>
+</div>
+</div>
 
-## Piste gupodoo
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Piste gupodoo</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
 La stratégie est ici de fetcher le nombre de commits de différence par
 rapport au dépot odoo/odoo plus le nombre de commits en local.
+</p>
 
+<p>
 La problématique n'est pour autant pas complètement résolue.
 Les pistes de git-submodules et git-subtree seront à explorer également.
+</p>
 
+<p>
 Le but est de ne pas tomber dans le même cas de figure de l'installation
 igpro-online tout en développant les modules client.
-*ATTENTION*
+<b>ATTENTION</b>
 Ne pas utiliser le script en l'état. Encore en test.
-## script gupodoo
-``` sh
-#!/bin/bash
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> script gupodoo</h3>
+<div class="outline-text-3" id="text-2-4">
+<div class="org-src-container">
 
-# Ce script met à jour odoo selon l'état d'avancement du projet sur le
-# dépôt officiel odoo sur github
+<pre class="src src-sh"><span style="color: #b22222;">#</span><span style="color: #b22222;">!/bin/</span><span style="color: #a020f0;">bash</span>
+
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Ce script met &#224; jour odoo selon l'&#233;tat d'avancement du projet sur le</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">d&#233;p&#244;t officiel odoo sur github</span>
 
 
-# La ligne suivante détermine si le dépôt local est sur la version 8.0
-# ou 9.0 de odoo
-branche=$(git branch -r | awk '{FS="/"} /->/ {print $3}')
+<span style="color: #b22222;"># </span><span style="color: #b22222;">La ligne suivante d&#233;termine si le d&#233;p&#244;t local est sur la version 8.0</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">ou 9.0 de odoo</span>
+<span style="color: #a0522d;">branche</span>=$(<span style="color: #ff00ff;">git</span> branch -r | awk <span style="color: #8b2252;">'{FS="/"} /-&gt;/ {print $3}'</span>)
 
-if [[ -z $branche ]]; then
-    branche=8.0
-    echo "On est sur la branche $branche"
-else
-    echo "On est sur la branche $branche"
-fi
+<span style="color: #a020f0;">if</span> [[ -z $<span style="color: #a0522d;">branche</span> ]]; <span style="color: #a020f0;">then</span>
+    <span style="color: #a0522d;">branche</span>=8.0
+    <span style="color: #483d8b;">echo</span> <span style="color: #8b2252;">"On est sur la branche $branche"</span>
+<span style="color: #a020f0;">else</span>
+    <span style="color: #483d8b;">echo</span> <span style="color: #8b2252;">"On est sur la branche $branche"</span>
+<span style="color: #a020f0;">fi</span>
 
-# On interroge la date du dernier commit disponible sur le dépôt local
-date_curr_HEAD=$(git show HEAD --format=%ci | head -1 | sed 's/\+.*//;s/ $//;s/$/Z/;s/ /T/')
-echo "Le dernier commit en local remonte au $date_curr_HEAD"
+<span style="color: #b22222;"># </span><span style="color: #b22222;">On interroge la date du dernier commit disponible sur le d&#233;p&#244;t local</span>
+<span style="color: #a0522d;">date_curr_HEAD</span>=$(<span style="color: #ff00ff;">git</span> show HEAD --format=%ci | head -1 | sed <span style="color: #8b2252;">'s/\+.*//;s/ $//;s/$/Z/;s/ /T/'</span>)
+<span style="color: #483d8b;">echo</span> <span style="color: #8b2252;">"Le dernier commit en local remonte au $date_curr_HEAD"</span>
 
-# On interroge github au travers de  son API pour compter le nombre de
-# commits que le dépôt local a en retard
-number_commits_forward=$(curl -si "https://api.github.com/repos/odoo/odoo/commits?sha=$branche&since=$date_curr_HEAD" |  grep \"commit\"  | wc -l)
-echo "Vous avez $number_commits_forward commits de différence avec l'état d'avancement du projet Odoo$branche"
+<span style="color: #b22222;"># </span><span style="color: #b22222;">On interroge github au travers de  son API pour compter le nombre de</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">commits que le d&#233;p&#244;t local a en retard</span>
+<span style="color: #a0522d;">number_commits_forward</span>=$(<span style="color: #ff00ff;">curl</span> -si <span style="color: #8b2252;">"https://api.github.com/repos/odoo/odoo/commits?sha=$branche&amp;since=$date_curr_HEAD"</span> |  grep <span style="color: #8b2252;">\"</span>commit<span style="color: #8b2252;">\"</span>  | wc -l)
+<span style="color: #483d8b;">echo</span> <span style="color: #8b2252;">"Vous avez $number_commits_forward commits de diff&#233;rence avec l'&#233;tat d'avancement du projet Odoo$branche"</span>
 
-#Si retard on fetch les commits manquants
-if [ $number_commits_forward -gt 0 ]; then
-    profondeur_local=$(git log --oneline | wc -l)
-    profondeur_fetch=$(($number_commits_forward + $profondeur_local))
-    echo "Le fetch aura $profondeur_fetch commits de profondeur"
-    git fetch --depth $profondeur_fetch
-else
-    echo "There is no new commits"
-fi
-
-```
-# Clonage de VM sur Proxmox
-Sur l'arborescence du menu de droite, clic droit sur dev0 et choisir cloner. Donner un nouveau nom à la machine et choisir ~qcow2~ comme type de disque.
+<span style="color: #b22222;">#</span><span style="color: #b22222;">Si retard on fetch les commits manquants</span>
+<span style="color: #a020f0;">if</span> [ $<span style="color: #a0522d;">number_commits_forward</span> -gt 0 ]; <span style="color: #a020f0;">then</span>
+    <span style="color: #a0522d;">profondeur_local</span>=$(<span style="color: #ff00ff;">git</span> log --oneline | wc -l)
+    <span style="color: #a0522d;">profondeur_fetch</span>=$(($<span style="color: #a0522d;">number_commits_forward</span> + $<span style="color: #a0522d;">profondeur_local</span>))
+    <span style="color: #483d8b;">echo</span> <span style="color: #8b2252;">"Le fetch aura $profondeur_fetch commits de profondeur"</span>
+    git fetch --depth $<span style="color: #a0522d;">profondeur_fetch</span>
+<span style="color: #a020f0;">else</span>
+    <span style="color: #483d8b;">echo</span> <span style="color: #8b2252;">"There is no new commits"</span>
+<span style="color: #a020f0;">fi</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Clonage de VM sur Proxmox</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Sur l'arborescence du menu de droite, clic droit sur dev0 et choisir cloner. Donner un nouveau nom à la machine et choisir <code>qcow2</code> comme type de disque.
 Lancer le clone et se connecter dessus avec
-``` sh
-ssh dev@192.168.1.9
-```
-Éditer le fichier ~/etc/network/interface~ et remplacer ~192.168.1.9~ par la nouvelle adresse.
+</p>
+<div class="org-src-container">
 
-	auto vmbr0
-	iface vmbr0 inet static
-	      address 192.168.1.9
-
+<pre class="src src-sh">ssh dev@192.168.1.9
+</pre>
+</div>
+<p>
+Éditer le fichier <code>/etc/network/interface</code> et remplacer <code>192.168.1.9</code> par la nouvelle adresse.
+</p>
+<pre class="example">
+auto vmbr0
+iface vmbr0 inet static
+      address 192.168.1.9
+</pre>
+<p>
 Changer les clés ssh du serveur sur la machine clone
-``` sh
-sudo rm /etc/ssh/ssh_host_*
-sudo dpkg-reconfigure openssh-server
-```
-Éditer le fichier ~/etc/hosts~ en remplaçant ~dev0~ par le nouveau nom d'hôte qu'on souhaite donner à la machine.
+</p>
+<div class="org-src-container">
 
+<pre class="src src-sh">sudo rm /etc/ssh/ssh_host_*
+sudo dpkg-reconfigure openssh-server
+</pre>
+</div>
+<p>
+Éditer le fichier <code>/etc/hosts</code> en remplaçant <code>dev0</code> par le nouveau nom d'hôte qu'on souhaite donner à la machine.
+</p>
+
+<p>
 Changer le hostname
-``` sh
-sudo hostnamectl set-hostname nouveaunom
-```
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo hostnamectl set-hostname nouveaunom
+</pre>
+</div>
+<p>
 Redémarrer
-``` sh
-sudo shutdown -r now
-```
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo shutdown -r now
+</pre>
+</div>
+<p>
 Si votre shell ne vous redonne pas la main utiliser la séquence suivante pour vous détacher
 [Enter] [~] [.] (Enter tilde point)
 La nouvelle machine est désormais accessible en ssh sous son nouveau nom.
-``` sh
-ssh dev@nouveaunom.local
-```
-# Partage samba
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">ssh dev@nouveaunom.local
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Partage samba</h2>
+<div class="outline-text-2" id="text-4">
+<p>
 Les instructions de partage à faire figurer dans le fichier de configuration samba
 /etc/samba/smb.conf
+</p>
+<pre class="example">
+[odoo]
+	path=/home/dev/path/to/odoo
+	guest ok = yes
+	read only = no
+	force group = dev
+	force user = dev
+	create mask = 0655
+	force directory mode = 0755
+</pre>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Apt-cacher-ng</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="https://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#howto-importiso">https://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#howto-importiso</a>
+</p>
+<div class="org-src-container">
 
-	[odoo]
-		path=/home/dev/path/to/odoo
-		guest ok = yes
-		read only = no
-		force group = dev
-		force user = dev
-		create mask = 0655
-		force directory mode = 0755
-# Apt-cacher-ng
-https://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#howto-importiso
-``` sh
-sudo mount -o umask=0022,gid=1002,uid=1002 /dev/sdb1 mdd
+<pre class="src src-sh">sudo mount -o <span style="color: #a0522d;">umask</span>=0022,<span style="color: #a0522d;">gid</span>=1002,<span style="color: #a0522d;">uid</span>=1002 /dev/sdb1 mdd
 sudo mount -o loop mdd/debian830_dvd/debian-8.3.0-amd64-DVD-3.iso miso
 sudo ln -s /home/aziz/miso/pool/ /home/aziz/apt-cacher-ng/_import/
-```
-Browse http://192.168.1.10:3142 to import in apt-cacher-ng
-``` sh
-sudo rm apt-cacher-ng/_import/pool
+</pre>
+</div>
+<p>
+Browse <a href="http://192.168.1.10:3142">http://192.168.1.10:3142</a> to import in apt-cacher-ng
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo rm apt-cacher-ng/_import/pool
 sudo umount miso
-```
-# Lenteur authentification SSH
-In file /etc/ssh/sshd_config
-
-	GSSAPIAuthentication no
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Lenteur authentification SSH</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+In file /etc/ssh/sshd<sub>config</sub>
+</p>
+<pre class="example">
+    GSSAPIAuthentication no
     # GSSAPIAuthentication yes
+</pre>
+<p>
+No need to restart
+</p>
+<pre class="example">
+UseDNS no
+</pre>
+<p>
+Need restart
+</p>
 
+<p>
 Ne donne pas d'améliorations notables
-# Machines virtuelles déplacée
+</p>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Machines virtuelles déplacée</h2>
+<div class="outline-text-2" id="text-7">
+<p>
 Proxmox crée des images disque dans /var/lib/vz
 Étant donné que la partition /var est limitée à 2.7G le répertoire a été déplacé dans
 /home/aziz/vz
 Un lien symbolique a été crée à l'ancien emplacement
-``` sh
-cp -R /var/lib/vz /home/aziz
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">cp -R /var/lib/vz /home/aziz
 mv /var/lib/vz /var/lib/vz2
-# Proxomox crée rapidement et automatiquement un dossier vz dans /var/lib
-# il faut donc s'y prendre rapidement pour créer le lien symbolique
-# En faisant suivre les commandes tel que suit c'est possible
-rm -r /var/lib/vz && ln -s /home/aziz/vz /var/lib/vz
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Proxomox cr&#233;e rapidement et automatiquement un dossier vz dans /var/lib</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">il faut donc s'y prendre rapidement pour cr&#233;er le lien symbolique</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">En faisant suivre les commandes tel que suit c'est possible</span>
+rm -r /var/lib/vz &amp;&amp; ln -s /home/aziz/vz /var/lib/vz
 rm -r /var/lib/vz2
-```
+</pre>
+</div>
+</div>
+</div>
 
-# Odoo à démarrage au boot
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Odoo à démarrage au boot</h2>
+<div class="outline-text-2" id="text-8">
+<p>
 Il existe une instance odoo tournant sur debian-IGPRO.
+</p>
 
-+Sa mise en place n'est pas documentée.+
+<p>
+<del>Sa mise en place n'est pas documentée.</del>
+</p>
 
-http://openies.com/install-openerp-odoo-9-on-ubuntu-server-14-04-lts/
-``` sh
-# Create Odoo System User that will own and run the odoo application.
+<p>
+<a href="http://openies.com/install-openerp-odoo-9-on-ubuntu-server-14-04-lts/">http://openies.com/install-openerp-odoo-9-on-ubuntu-server-14-04-lts/</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #b22222;"># </span><span style="color: #b22222;">Create Odoo System User that will own and run the odoo application.</span>
 sudo adduser --system --home=/opt/odoo --group odoo
-# Install and Configure Postgres
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Install and Configure Postgres</span>
 sudo apt-get install postgresql
-# OR
-# Create the file /etc/apt/sources.list.d/pgdg.list, and add a line for the
-# repository using vim or nano editor
-# deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main
-# Import the repository signing key, and update the package lists
-# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-# After installing postgres 9.4, change to the postgres user so we have the
-# necessary privileges to configure the database
+<span style="color: #b22222;"># </span><span style="color: #b22222;">OR</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Create the file /etc/apt/sources.list.d/pgdg.list, and add a line for the</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">repository using vim or nano editor</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Import the repository signing key, and update the package lists</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">After installing postgres 9.4, change to the postgres user so we have the</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">necessary privileges to configure the database</span>
 sudo su - postgres
-# Now create a new database user with access to create and drop database.
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Now create a new database user with access to create and drop database.</span>
 createuser --createdb --username postgres --no-createrole --no-superuser --pwprompt odoo
-# Enter password for new role: ********
-# Enter it again: ********
-exit
-# Install the necessary libraries
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Enter password for new role: ********</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Enter it again: ********</span>
+<span style="color: #a020f0;">exit</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Install the necessary libraries</span>
 sudo apt-get install python-pip python-dev libevent-dev gcc libxml2-dev libxslt-dev node-less libldap2-dev libssl-dev libsasl2-dev
-# Note : Odoo 9 is depends on node-less
-# After installing this system libraries we can install python libraries using
-# pip. Create requirement.txt file in server.
-cd /tmp && wget https://raw.githubusercontent.com/odoo/odoo/9.0/ requirements.txt && sudo pip install -r requirements.txt
-# Install wkhtmltopdf
-# wkhtmltopdf is necessary for odoo’s Qweb templating.
-# http://download.gna.or/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Note : Odoo 9 is depends on node-less</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">After installing this system libraries we can install python libraries using</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">pip. Create requirement.txt file in server.</span>
+<span style="color: #483d8b;">cd</span> /tmp &amp;&amp; wget https://raw.githubusercontent.com/odoo/odoo/9.0/ requirements.txt &amp;&amp; sudo pip install -r requirements.txt
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Install&#160;wkhtmltopdf</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">wkhtmltopdf is necessary for odoo&#8217;s Qweb templating.</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">http://download.gna.or/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb</span>
 sudo dpkg -i /tmp/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
-# Now we will Install Git in order to get the code from github:
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Now we will Install Git in order&#160;to get the code from github:</span>
 sudo apt-get install git
-# Switch to the Odoo user:
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Switch to the Odoo user:</span>
 sudo su - odoo -s /bin/bash
-# Grab a copy of the most current Odoo 9(master) branch (Note the “.” at the end of this command!):
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Grab a copy of the most current Odoo 9(master) branch (Note the &#8220;.&#8221; at the end of this command!):</span>
 git clone https://www.github.com/odoo/odoo --depth 1 --branch 9.0 --single-branch .
-# Configuring the Odoo application
-# The   default   configuration   file   for   the   server   is   under
-# /opt/odoo/debian/ openerp-server.conf.  we’ll copy that file  to where
-# we need it and change it’s ownership and permissions:
-cd /etc && mkdir odoo
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Configuring the Odoo application</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">The   default   configuration   file   for   the   server   is   under</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">/opt/odoo/debian/ openerp-server.conf.  we&#8217;ll copy that file  to where</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">we need it and change it&#8217;s ownership and permissions:</span>
+<span style="color: #483d8b;">cd</span> /etc &amp;&amp; mkdir odoo
 sudo cp /opt/odoo/debian/openerp-server.conf /etc/odoo/odoo-server.conf
 sudo chown odoo: /etc/odoo/odoo-server.conf
 sudo chmod 640 /etc/odoo/odoo-server.conf
-# To allow odoo to use default addons you need to change the addons_path line in
-# config file addons_path = /usr/lib/python2.7/dist-packages/openerp/addons in
-# the config file to addons_path = /opt/odoo/addons
+<span style="color: #b22222;"># </span><span style="color: #b22222;">To allow odoo to use default addons you need to change the addons_path line in</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">config file addons_path = /usr/lib/python2.7/dist-packages/openerp/addons in</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">the config file to addons_path = /opt/odoo/addons</span>
 
-# Installing the Init script
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Installing the Init script</span>
 sudo cp /opt/odoo/debian/init /etc/init.d/odoo-server
 sudo chmod 755 /etc/init.d/odoo-server
 sudo chown root: /etc/init.d/odoo-server
-# create odoo directory under /var/log/
+<span style="color: #b22222;"># </span><span style="color: #b22222;">create odoo directory under /var/log/</span>
 sudo mkdir /var/log/odoo
-cd /var/log/odoo
-cat > odoo-server.log
-# give the permission to writable by the odoo user
+<span style="color: #483d8b;">cd</span> /var/log/odoo
+cat &gt; odoo-server.log
+<span style="color: #b22222;"># </span><span style="color: #b22222;">give the permission to writable by the odoo user</span>
 sudo chmod 755 /var/log/odoo/odoo-server.log
 sudo chown odoo:root -R /var/log/odoo/
-# Testing the odoo server
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Testing the odoo server</span>
 sudo /etc/init.d/odoo-server start
 sudo tail -f /var/log/odoo/odoo-server.log
 sudo /etc/init.d/odoo-server stop
 
-# Atomizing Odoo server startup
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Atomizing Odoo server startup</span>
 sudo update-rc.d odoo-server defaults
-```
+</pre>
+</div>
+</div>
+</div>
 
-# Init
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Init</h2>
+<div class="outline-text-2" id="text-9">
+<p>
 Ce dépôt contient les configurations en cours sur debian-IGPRO.
+</p>
 
+<p>
 Le système héberge un serveur Proxmox qui permet la gestion des machines virtuelles
+</p>
 
-Le fichier ~network/interfaces~ gère les NIC virtuels servant aux bridges
+<p>
+Le fichier <code>network/interfaces</code> gère les NIC virtuels servant aux bridges
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Aziz Yemloul</p>
+<p class="date">Created: 2016-02-09 mar. 14:45</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.2 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
